@@ -34,8 +34,8 @@ func getHostEnv(key string, defHost string) string {
 
 func NewCfg() *Cfg {
 	return &Cfg{
-		Host:           getHostEnv("HOST", "localhost"),
-		Port:           getIntEnv("PORT", 8080),
+		Host:           getHostEnv("ASYNC_CALCULATOR_HOST", "localhost"),
+		Port:           getIntEnv("ASYNC_CALCULATOR_PORT", 8080),
 		Addr:           getHostEnv("HOST", "localhost") + ":" + strconv.Itoa(getIntEnv("PORT", 8080)),
 		AddTimeout:     getIntEnv("TIME_ADDITION_MS", 5000),
 		SubTimeout:     getIntEnv("TIME_SUBTRACTION_MS", 5000),
